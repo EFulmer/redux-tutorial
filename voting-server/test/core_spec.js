@@ -36,7 +36,7 @@ describe('application logic', () => {
       const nextState = next(state);
       expect(nextState).to.equal(Map({
         vote: Map({
-          pair: list.of('Trainspotting', '28 Days Later')
+          pair: List.of('Trainspotting', '28 Days Later')
         }),
         entries: List.of('Sunshine')
       }));
