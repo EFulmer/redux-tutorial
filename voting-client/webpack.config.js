@@ -1,4 +1,4 @@
-var webpack = requre('webpack');
+var webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -7,7 +7,7 @@ module.exports = {
     './src/index.jsx'
   ],
   module: {
-    loaders [{
+    loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'react-hot!babel'
@@ -22,7 +22,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
